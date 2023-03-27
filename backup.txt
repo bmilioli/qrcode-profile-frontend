@@ -1,0 +1,20 @@
+function App() {
+  return (
+    <div className="App">
+      <h1>QR code image generator</h1>
+
+      <form method="post" action="/generate">
+        <label htmlFor="name">Name:</label>
+        <input type="text" name="name" id="name" required /><br /><br />
+
+        <label htmlFor="linkedin">Linkedin URL:</label>
+        <input type="url" name="linkedin" id="linkedin" required /><br /><br />
+
+        <label htmlFor="github">Github URL:</label>
+        <input type="url" name="github" id="github" required /><br /><br />
+
+        <input type="submit" value="Generate Image" />
+      </form>
+    </div>
+  );
+}
