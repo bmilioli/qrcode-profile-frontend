@@ -1,10 +1,10 @@
-import './App.css';
+import "./App.css";
 
 //Router
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 //Pages
-import Home from './pages/Home/Home';
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -14,7 +14,6 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 }
