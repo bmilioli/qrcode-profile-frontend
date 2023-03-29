@@ -20,7 +20,8 @@ const Canvas = () => {
     return (
         <div>
             <h1>QR code image generator</h1>
-            <p>Your download should start automatically...</p>
+            <p>With the download don't start automaticaly clik the botton</p>
+            <button onClick={handleRefresh}>Click Here</button>
         </div>
     );
 }
