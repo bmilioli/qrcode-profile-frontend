@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 //Hooks
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import register from "../../services/registerService";
 
 const Home = () => {
@@ -15,7 +14,6 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-
     const user = {
       name,
       linkedinId,
@@ -26,15 +24,13 @@ const Home = () => {
     register(user);
 
     navigate(`/download/${name}`);
-
   };
-
 
   return (
     <div>
       <h1>QR code image generator</h1>
 
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           type="text"

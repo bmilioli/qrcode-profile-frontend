@@ -1,29 +1,26 @@
 import React from "react";
 
-
-//components
-import { Link } from "react-router-dom";
-
 //Hooks
-import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 import getCanvas from "../../services/canvasService";
 
-
-
 const Canvas = () => {
-    let name = window.location.pathname.split("/")[2];
-    useEffect(() => {
-        getCanvas(name);
-    }, []);
+  let name = window.location.pathname.split("/")[2];
+  useEffect(() => {
+    getCanvas(name);
+  }, []);
 
-    return (
-        <div>
-            <h1>QR code image generator</h1>
-            <p>With the download don't start automaticaly clik the botton</p>
-            <button onClick={handleRefresh}>Click Here</button>
-        </div>
-    );
-}
+  return (
+    <div>
+      <h1>QR code image generator</h1>
+      <p>
+        If the download doesn't start automatically, click the button. It may
+        take a 1 minute to start after clicking
+      </p>
+
+      <button onClick={() => window.location.reload()}>Download</button>
+    </div>
+  );
+};
 
 export default Canvas;
