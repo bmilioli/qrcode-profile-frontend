@@ -14,24 +14,27 @@ function Profile() {
         const fetchData = async () => {
             try {
                 const result = await getProfile(profile);
-                setData(result);
+                setData(result.data.currentUser);
+                console.log(result.data.currentUser);
+
             } catch (error) {
                 console.error(error);
-                alert('Não foi possível carregar o perfil');
+                alert('It was not possible to get the profile');
             }
         };
         fetchData();
     }, [profile]);
 
-    const { name, linkedinID, githubID } = data;
+    const { name, linkedinId, githubId } = data;
+
 
     return (
         <div>
             <h1>Meu Perfil</h1>
             <p>{name}</p>
-            <p>Olá, esse é o meu perfil</p>
-            <button onClick={() => window.location.href = linkedinID}>LinkedIn</button>
-            <button onClick={() => window.location.href = githubID}>GitHub</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+            <button onClick={() => window.location.href = linkedinId}>LinkedIn</button>
+            <button onClick={() => window.location.href = githubId}>GitHub</button>
         </div>
     );
 }

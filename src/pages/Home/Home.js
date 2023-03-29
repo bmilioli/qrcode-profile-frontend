@@ -47,7 +47,6 @@ const Home = () => {
 
         <label htmlFor="linkedin">Linkedin URL:</label>
         <input
-          type="url"
           onChange={(e) => setLinkedinId(e.target.value)}
           value={linkedinId}
           required
@@ -57,7 +56,6 @@ const Home = () => {
 
         <label htmlFor="github">Github URL:</label>
         <input
-          type="url"
           onChange={(e) => setGithubId(e.target.value)}
           value={githubId}
           required

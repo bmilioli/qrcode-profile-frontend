@@ -7,7 +7,7 @@ const getProfile = async (name) => {
         const response = await axios.get(`${api}/users/profile?name=${name}`, {
             timeout: 5000 // timeout de 5 segundos
         });
-        return response.data;
+        return response;
     } catch (error) {
         console.error(error);
         throw new Error('Não foi possível obter o perfil');
